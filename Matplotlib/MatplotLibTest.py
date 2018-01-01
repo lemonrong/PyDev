@@ -4,7 +4,7 @@ from pylab import *
 im = array(Image.open('PolarBear.jpg'))
 imshow(im)
 
-// 在python窗口中可以实现。
+# 在python窗口中可以实现。
 #print('Please click 3 points')
 #x = ginput(3)
 #print('You clicked:', x)
