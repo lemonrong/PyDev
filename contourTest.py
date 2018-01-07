@@ -9,6 +9,6 @@ contour(im, origin='image')
 axis('equal')
 axis('off')
 
-#figure()
-#hist(im.flatten(), 128)
+figure()
+hist(im.flatten(), 128)
 show()
