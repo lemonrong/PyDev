@@ -1,6 +1,8 @@
 from PIL import Image
 from numpy import *
 from pylab import *
+import imtools
+
 im = array(Image.open('PolarBear.jpg').convert('L'))
 im2 = 255 - im
 
@@ -12,5 +14,7 @@ print(int(im2.min()), int(im2.max()))
 print(int(im3.min()), int(im3.max()))
 print(int(im4.min()), int(im4.max()))
 
-imshow(im4)
+# im5, cdf = imtools.histeq(im);
+
+imshow(im5)
 show()
