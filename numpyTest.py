@@ -14,7 +14,7 @@ print(int(im2.min()), int(im2.max()))
 print(int(im3.min()), int(im3.max()))
 print(int(im4.min()), int(im4.max()))
 
-# im5, cdf = imtools.histeq(im);
+im5, cdf = imtools.histeq(im);
 
 imshow(im5)
 show()
