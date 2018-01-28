@@ -47,11 +47,11 @@ def pca(X):
     num_data, dim = X.shape
 
     # 数据中心化
-    mean_X= X.mean(axis=0)
+    mean_X = X.mean(axis=0)
     X = X - mean_X
 
     if dim>num_data:
-        # pca 使用紧致技巧
+        # PCA - 使用紧致技巧
         M = dot(X, X.T) #协方差矩阵
         e, EV = linalg.eigh(M) # 特征值和特征向量
         tmp = dot(X.T, EV).T  #这就是紧致技巧
@@ -60,7 +60,7 @@ def pca(X):
         for i in range(V.shape[1]):
             V[:, i] /= S
     else:
-        # Pca 使用SVD方法
+        # PCA - 使用SVD方法
         U,S,V = linalg.svd(X)
         V = V[:, num_data]  # 仅仅返回num_data维的数据才合理
     # 返回投影矩阵，方差和均值
